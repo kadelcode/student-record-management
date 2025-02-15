@@ -9,7 +9,7 @@ sudo apt update && sudo apt install gcc
 ```
 2. Clone the repository:
 ```
-git clone https://github.com/yourusername/student-record-management.git cd student-record-management
+git clone https://github.com/kadelcode/student-record-management.git cd student-record-management
 ```
 3. Compile the program:
 ```
