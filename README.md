@@ -19,3 +19,14 @@ gcc src/main.c src/student.c -o student_management
 ```
 ./student_management
 ```
+
+### Windows:
+1. Install MinGW and add it to your PATH.
+2. Clone the repository and compile:
+```
+gcc src/main.c src/student.c -o student_management.exe
+```
+3. Run the application:
+```
+student_management.exe
+```
