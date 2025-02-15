@@ -1,0 +1,28 @@
+name: C Build & Test 
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latests
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v3
+              
+            - name: Install GCC
+              run: sudo apt update && sudo apt install -y gcc make
+
+            - name: Compile Program
+              run: |
+                gcc src/main.c src/student.c -o student_management
+                echo "Compilation Successful"
+
+            - name: Run tests
+              run:  ./student_management < test_input.txt > test_output.txt
